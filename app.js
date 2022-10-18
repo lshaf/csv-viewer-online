@@ -1,4 +1,5 @@
 var input = document.getElementById('input-file')
+var delimiter = document.getElementById('delimiter');
 var handsontableContainer = document.getElementById('handsontable-container')
 
 input.onchange = function () {
@@ -9,15 +10,15 @@ input.onchange = function () {
     var csv = e.target.result
     var data = Papa.parse(csv, {
       header: true,
-      skipEmptyLines: true
+      skipEmptyLines: true,
+      delimiter: delimiter.value
     })
 
     // reset container
     handsontableContainer.innerHTML = ''
     handsontableContainer.className = ''
-    document.querySelector('input').remove()
+    document.querySelector('input,.input').remove()
     document.querySelector('.github-corner').remove()
-    document.querySelector('.place-your-ad-here').remove()
 
     Handsontable(handsontableContainer, {
       data: data.data,
