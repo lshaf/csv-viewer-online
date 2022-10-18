@@ -1,5 +1,8 @@
 # CSV Viewer Online
-### [https://limonte.github.io/csv-viewer-online/](https://limonte.github.io/csv-viewer-online/)
+### [https://lshaf.github.io/csv-viewer-online/](https://lshaf.github.io/csv-viewer-online/)
+
+### Added from original:
+- Custom delimiter
 
 ### Used plugins:
 
