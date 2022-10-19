@@ -32,3 +32,12 @@ input.onchange = function () {
 
   file && reader.readAsText(file)
 }
+
+function logSelected() {
+  let r = []
+  for (let x of document.querySelectorAll(".highlight")) {
+      r.push(x.innerHTML)
+  }
+
+  console.log(r.join("\n"))
+}
